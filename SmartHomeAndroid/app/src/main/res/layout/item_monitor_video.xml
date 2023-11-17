@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/old_video_linearLayout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@drawable/di_decibel">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/onely_sansl" />
+
+    <TextView
+        android:id="@+id/old_video_textView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="5"
+        android:gravity="center|left"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/onely_sansl"
+        android:text="2001/10/24  18 : 24 : 50"/>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/di_login_button_back"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/room_listView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+    </ListView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/text_200" />
+
+    <LinearLayout
+        android:id="@+id/room_manage_view"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            app:srcCompat="@drawable/ic_baseline_settings" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:text="房間管理"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

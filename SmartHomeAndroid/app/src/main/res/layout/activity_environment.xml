@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_200"
+    tools:context=".ui.device.environment.EnvironmentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/env_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/accent_200"
+        app:layout_constraintBottom_toTopOf="@+id/env_h_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/humidity_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/di_humidity_view"
+        app:layout_constraintBottom_toTopOf="@+id/env_h_line3"
+        app:layout_constraintEnd_toStartOf="@+id/env_v_line2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/env_v_line"
+        app:layout_constraintTop_toTopOf="@+id/env_h_line2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/humidity_lottie"
+            android:layout_width="85dp"
+            android:layout_height="100dp"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/humidity_layout"
+            app:layout_constraintEnd_toStartOf="@+id/humidity_line"
+            app:layout_constraintStart_toStartOf="@id/humidity_layout"
+            app:layout_constraintTop_toTopOf="@id/humidity_layout"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation_humidity.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/waves_lottie"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/humidity_layout"
+            app:layout_constraintEnd_toStartOf="@+id/humidity_line"
+            app:layout_constraintStart_toStartOf="@id/humidity_layout"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation_waves.json"
+            app:lottie_loop="true"
+            app:lottie_speed="3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/humidity_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/humidity_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/onely_sansl"
+            android:text="Nan%"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="@+id/humidity_line"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temperature_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/di_temperature"
+        app:layout_constraintBottom_toTopOf="@+id/env_h_line5"
+        app:layout_constraintEnd_toEndOf="@+id/humidity_layout"
+        app:layout_constraintStart_toStartOf="@+id/env_v_line"
+        app:layout_constraintTop_toTopOf="@+id/env_h_line4">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/temperature_lottie"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/temperature_layout"
+            app:layout_constraintEnd_toStartOf="@+id/temperature_line"
+            app:layout_constraintStart_toStartOf="@id/temperature_layout"
+            app:layout_constraintTop_toTopOf="@id/temperature_layout"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation_temperature.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/temperature_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/temperature_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nan%"
+            android:textColor="@color/black"
+            android:fontFamily="@font/onely_sansl"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="@+id/temperature_line"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brightness_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/di_brightness"
+        app:layout_constraintBottom_toTopOf="@+id/env_v_line7"
+        app:layout_constraintEnd_toEndOf="@+id/humidity_layout"
+        app:layout_constraintStart_toStartOf="@+id/env_v_line"
+        app:layout_constraintTop_toTopOf="@+id/env_h_line6">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/brightness_lottie"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="@id/brightness_layout"
+            app:layout_constraintEnd_toStartOf="@+id/brightness_line"
+            app:layout_constraintStart_toStartOf="@id/brightness_layout"
+            app:layout_constraintTop_toTopOf="@id/brightness_layout"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation_brightness.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/brightness_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/brightness_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nan%"
+            android:textColor="@color/black"
+            android:fontFamily="@font/onely_sansl"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="@+id/brightness_line"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_v_line7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_h_line8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/decibel_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/di_decibel"
+        app:layout_constraintBottom_toTopOf="@+id/env_v_line9"
+        app:layout_constraintEnd_toStartOf="@+id/env_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/env_v_line"
+        app:layout_constraintTop_toTopOf="@+id/env_h_line8">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/decibel_lottie"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="@id/decibel_layout"
+            app:layout_constraintEnd_toStartOf="@+id/decibel_line"
+            app:layout_constraintStart_toStartOf="@id/decibel_layout"
+            app:layout_constraintTop_toTopOf="@id/decibel_layout"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="animation_decibel.json"
+            app:lottie_loop="true"
+            app:lottie_speed="1.5" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/decibel_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <TextView
+            android:id="@+id/decibel_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nan%"
+            android:textColor="@color/black"
+            android:fontFamily="@font/onely_sansl"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.289"
+            app:layout_constraintStart_toStartOf="@+id/decibel_line"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_v_line9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <Button
+        android:id="@+id/evn_add_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="連接設備"
+        android:textSize="20sp"
+        android:background="@drawable/di_login_view"
+        app:layout_constraintEnd_toStartOf="@+id/env_v_line2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/env_v_line"
+        app:layout_constraintTop_toTopOf="@+id/env_v_line9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_v_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/env_v_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

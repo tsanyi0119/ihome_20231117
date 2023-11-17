@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_100"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/main_h_line2"
+        app:layout_constraintEnd_toStartOf="@+id/main_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/main_v_line"
+        app:layout_constraintTop_toTopOf="@+id/main_h_line">
+        <LinearLayout
+            android:id="@+id/home_name_linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/di_main_view">
+                <TextView
+                    android:id="@+id/home_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="22sp"
+                    android:gravity="center|left"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="▼"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/main_setting_imageButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/bg_100"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ph_setting" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_h_line3"
+        app:layout_constraintEnd_toStartOf="@+id/main_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/main_v_line"
+        app:layout_constraintTop_toTopOf="@+id/main_h_line2">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/wx_imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t_textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="27"
+                android:textColor="@color/text_100"
+                android:textSize="60sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="°C"
+                android:textColor="@color/text_100"
+                android:textSize="45dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pop6h_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:textStyle="bold"
+                android:textColor="@color/text_200"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/rh_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:textColor="@color/text_200"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ws_textView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center|left"
+                android:textColor="@color/text_200"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/main_h_line4"
+        app:layout_constraintEnd_toStartOf="@+id/main_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/main_v_line"
+        app:layout_constraintTop_toTopOf="@+id/main_h_line3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="5dp"
+            android:id="@+id/main_room_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageButton
+            android:id="@+id/room_setting_imageButton"
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:background="@drawable/di_main_view"
+            app:srcCompat="@drawable/ic_more_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/main_h_line6"
+        app:layout_constraintEnd_toStartOf="@+id/main_v_line2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/main_v_line"
+        app:layout_constraintTop_toTopOf="@+id/main_h_line5"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/main_light_include"
+                layout="@layout/item_main_sensor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/main_monitor_include"
+                layout="@layout/item_main_sensor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/main_environment_include"
+                layout="@layout/item_main_sensor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/main_lock_include"
+                layout="@layout/item_main_sensor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4350205" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_h_line6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95348835" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_v_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04379562" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_v_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96107054" />
+</androidx.constraintlayout.widget.ConstraintLayout>

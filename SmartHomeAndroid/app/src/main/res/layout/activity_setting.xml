@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_100"
+    tools:context=".ui.settings.setting.SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/setting_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/accent_200"
+        app:layout_constraintBottom_toTopOf="@+id/setting_h_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/setting_h_line2"
+        app:layout_constraintEnd_toStartOf="@+id/setting_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/setting_v_line"
+        app:layout_constraintTop_toTopOf="@+id/setting_h_line">
+    <ImageView
+        android:id="@+id/setting_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ph_setting_user"
+        android:layout_weight="2.5">
+    </ImageView>
+    <TextView
+        android:id="@+id/setting_userName_textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:fontFamily="@font/onely_sansl"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:text="Chocolee"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="1000dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/di_login_view"
+        app:layout_constraintEnd_toStartOf="@+id/setting_v_line2"
+        app:layout_constraintStart_toStartOf="@+id/setting_v_line"
+        app:layout_constraintTop_toTopOf="@+id/setting_h_line2">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <Button
+            android:id="@+id/setting_email_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/di_login_button_back"
+            android:text="chocolee1020@gmail.com"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:fontFamily="@font/onely_sansl"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/setting_h_line3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <Button
+            android:id="@+id/setting_home_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/di_login_button_back"
+            android:text="刪除家庭"
+            android:textColor="@color/black"
+            android:fontFamily="@font/onely_sansl"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/setting_h_line5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.19" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <Button
+            android:id="@+id/setting_password_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password"
+            android:fontFamily="@font/onely_sansl"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/di_login_button_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/setting_h_line7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line8"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <Button
+            android:id="@+id/setting_logout_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/logout"
+            android:fontFamily="@font/onely_sansl"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/di_logout_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/setting_h_line9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/setting_h_line10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.37" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/setting_h_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/setting_h_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/setting_v_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0729927" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/setting_v_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

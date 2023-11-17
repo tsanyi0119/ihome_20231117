@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SmartHomeAndroid</string>
+    <string name="log_name">I-HOME</string>
+    <string name="login">登入</string>
+    <string name="register">註冊</string>
+
+    <string name="register_verify">驗證</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">更改密碼</string>
+    <string name="logout_failed">登出失敗</string>
+    <string name="delete">刪除</string>
+    <string name="upload_photo_failed">照片設定失敗</string>
+    <string name="upload_photo_success">照片設置成功</string>
+    <string name="delete_home">刪 除 家 庭</string>
+    <string name="add_home">新增家庭</string>
+    <string name="add_room">新 增 房 間</string>
+</resources>

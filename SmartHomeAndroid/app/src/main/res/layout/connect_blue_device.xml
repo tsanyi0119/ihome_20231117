@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.device.newdevice.connectbluefragment.ConnectBlueFragment"
+    android:background="@color/bg_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="50sp"
+                android:paddingBottom="20sp"
+                android:text="選  擇  藍  芽"
+                android:textAlignment="center"
+                android:textColor="@color/accent_200"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_margin="20dp"
+            android:background="@drawable/di_roomset_custom_view_background"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/monitor_video_h_line6"
+            app:layout_constraintEnd_toStartOf="@+id/monitor_video_v_line2"
+            app:layout_constraintStart_toStartOf="@+id/monitor_video_v_line"
+            app:layout_constraintTop_toTopOf="@+id/monitor_video_h_line4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/di_roomseet_custom_detaileview_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/onely_sansl"
+                    android:gravity="center"
+                    android:text="Bluetooth"
+                    android:textColor="@color/black"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_device_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:padding="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
